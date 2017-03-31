@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\graphicspath{ {F:/Documents/LATEX_IMAGES/} }
+
+\title{\vspace{-3cm}Data Structures Final Project Analysis}
+\author{\vspace{-3mm}Tyler Andrews}
+\date{\vspace{-3mm}December 16, 2016\vspace{-3mm}}
+\pagenumbering{gobble}
+
+\begin{document}
+
+\maketitle
+
+All in all, this assignment was very eye opening. I was extremely surprised by the differences in performance between the sorting algorithms we tried, and specifically how much more efficient quicksort was than the others. On average, it was a few hundred times faster for large inputs. It managed to sort 50,000 numbers in under 10ms, which was much faster than I would have ever guessed. Here you can see my program's output for an input file containing 50,000 randomized doubles:
+
+\vspace{3mm}
+\centerline{\includegraphics[scale=.8]{output1}}
+
+\flushleft
+
+In this case, quicksort was nearly 300 times faster than insertion sort, and (not shown) 600 times faster than gnome sort. This is a good representation of logarithmic vs. quadratic performance. On paper, O(n\textsuperscript{2}) may not look much larger than O(nlogn), but this exercise certainly shows how far apart they really are in terms of speed and efficiency.
+
+\vspace{3mm}
+
+\qquad
+As far as performance, the brute force algorithms had a very clear hindrance on my VM. Both insertion sort and gnome sort spiked CPU usage for my VM to 100\%. Here you can see the absurd spike in resources when insertion sort is initated. The program also appears to use about 800MB of RAM, which seems very high.
+
+\vspace{3mm}
+\centerline{\includegraphics[scale=.75]{usage3}}
+\vspace{3mm}
+
+\qquad
+I think this analysis would have benefited from a visual component other than seeing the run times themselves. Seeing the data being sorted would be a great way to show the speed of the algorithms (like the YouTube videos we watched in class) in a more direct way. Overall, I was extremely impressed by the efficiency of quicksort, and I think this assignment was a very good indicator of the value of recursion.
+
+\end{document}
