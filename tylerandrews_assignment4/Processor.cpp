@@ -52,8 +52,6 @@ bool Processor::readFile(string f)
 
         while (getline (inputfile,line))
         {
-            cout << "NS" << numStudents << endl;
-            cout << "got to the while" << endl;
             cout << lineType << endl;
 
             switch (lineType)
@@ -61,7 +59,6 @@ bool Processor::readFile(string f)
                 // CLOCK TICK
                 case (1):
                 {
-                    cout << "got to first case" << endl;
                     try
                     {
                         //First line number of windows
@@ -95,8 +92,6 @@ bool Processor::readFile(string f)
                             getline (inputfile,line);
 
                             studentTimeAtWindow = stoi(line);
-
-                            cout << "dygh? TAW: " << studentTimeAtWindow << endl;
 
                             // ADD WAIT TO TOTAL FOR STATS
                             waitTotal += studentTimeAtWindow;
@@ -140,7 +135,6 @@ bool Processor::readFile(string f)
 
     else
     {
-        cout << "WHOEL THING DID NT WORK" << endl;
 
         return false;
     }

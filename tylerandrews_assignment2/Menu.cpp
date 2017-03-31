@@ -95,7 +95,6 @@ string Menu::getInputFileName()
 	string i;
 	while (true)
 	{
-		
 		ifstream filetest;	
 		getline(cin, i);
 		filetest.open(i.c_str());

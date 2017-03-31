@@ -20,20 +20,16 @@ int main(int argc, char** argv)
 		// CHECK IF ARGUMENT IS A FILE; IF SO, RUN PROGRAM
 		if (p.readFile(argv[1]))
 		{
-			cout << "WE DID IT HOORAY!!" << endl;
 
             while (true)
             {
                 running = false;
-
-                cout << "p.nW " << p.numWindows << endl;
 
                 // IF ANY WINDOW IS OCCUPIED, CONTINUE RUNNING
                 for (int i = 0; i < p.numWindows; ++i)
                 {
                     if (p.windowArray[i] > 0)
                     {
-                        cout << "put random shit" << endl;
                         running = true;
                     }
                 }
@@ -50,7 +46,6 @@ int main(int argc, char** argv)
                 // MAIN PROGRAM
                 if (running)
                 {
-                    cout << "DO YOU RUN???" << endl;
 
                     openWindows = 0;
 
